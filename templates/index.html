@@ -1,0 +1,286 @@
+{% extends 'template/template.html' %}
+{% block content %}
+   <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+            data-aos="fade-up"
+            data-aos-delay="200">
+            <h1>Sentiment Analyzer</h1>
+            <h2>
+              Use sentiment analysis to quickly detect emotions in text data.
+            </h2>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              <a href="#about" class="btn-get-started scrollto">Get Started</a>
+             
+            </div>
+          </div>
+          <div
+            class="col-lg-6 order-1 order-lg-2 hero-img"
+            data-aos="zoom-in"
+            data-aos-delay="200">
+            <img
+              src="{{ url_for('static', filename='nlp-img.png') }}"
+              class="img-fluid animated"
+              alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+     <main id="main">
+      <!-- ======= Sentiment ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Play around with our sentiment analyzer, below:</h2>
+          </div>
+          <div class="row content">
+            <div class="col-lg-6">
+              <h3>Test with your own text</h3>
+              <form action="{{ url_for('predict')}}" method="post"
+                class="php-email-form">              
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    placeholder="This is the best sentiment analysis tool ever!!!"
+                    rows="8"
+                    required></textarea>
+                </div> 
+                <a href="#about">
+                  <button type="submit"  class="btn-learn-more mt-4">
+                   Classify Text
+                </button> </a>  
+                          
+              </form>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0">
+              <h3>Results</h3>
+              <table class="table text-center mt-5">
+              <tbody>
+                <tr>
+                  <td> <h3>{{ prediction_text }}</h3></td>
+                </tr>               
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Us Section -->
+
+       <!-- ======= Sentiment Analysis Benefit ======= -->
+      <section id="services" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Sentiment analysis benefits:</h2>
+            <h5>
+              Build text classifiers for detecting topic, sentiment, intent, urgency and more. Analyze your text data in seconds, not weeks!
+            </h5>
+          </div>
+
+          <div class="row">
+            <div
+              class="col-xl-3 col-md-6 d-flex align-items-stretch"
+              data-aos="zoom-in"
+              data-aos-delay="100">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-emoji-wink"></i></div>
+                <h6>Quickly detect negative comments & respond instantly</h6>
+                
+              </div>
+            </div>
+
+            <div
+              class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
+              data-aos="zoom-in"
+              data-aos-delay="200">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-emoji-smile"></i></div>
+                <h6>Improve response times to urgent queries by 65%</h6>
+               
+              </div>
+            </div>
+
+            <div
+              class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
+              data-aos="zoom-in"
+              data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-emoji-laughing"></i></div>
+                <h6>
+                  Take on 20% higher data volume
+                </h6>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
+              data-aos="zoom-in"
+              data-aos-delay="400">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-speedometer"></i></div>
+                <h6>Monitor sentiment about your brand, product, or service in real time</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Sentiment  Analysis Benefit -->
+
+      <!-- ======= Profile Section ======= -->
+      <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Profile</h2>
+            <p>
+              Hi, I am Shoya
+            </p>
+            <p>Welcome to my Sentiment Analysis Portofolio!</p>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                class="member d-flex align-items-start"
+                data-aos="zoom-in"
+                data-aos-delay="100">
+                <div class="pic">
+                  <img
+                    src="{{ url_for('static', filename='team-1.jpeg') }}"
+                    class="img-fluid"
+                    alt="" />
+                </div>
+                <div class="member-info">
+                  <h4>Shopi Nurhidayanti</h4>
+                  <span>Institut Teknologi Garut</span>
+                  <p>
+                    I am an active student in semester 5 majoring in Informatics engineering who is currently participating in the Certified Independent Study learning of the Merdeka Campus program
+                  </p>
+                  <div class="social">
+                    <a href="https://twitter.com/shoyaa___" target="_blank"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com/shp.thv/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/shopi-nurhidayanti-87765521b/" target="_blank"><i class="bi bi-linkedin"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Team Section -->
+
+       <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Contact</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-5 d-flex align-items-stretch">
+              <div class="info">
+                <div class="address">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>Jln. Tenjolaya Dalam No 10 Tarogong Kidul Garut, Jawa Barat 44151</p>
+                </div>
+
+                <div class="email">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>sh.pinh14@gmail.com</p>
+                </div>
+
+                <div class="phone">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>+62 81224501871</p>
+                </div>
+
+                <iframe
+                  src="https://www.bing.com/search?q=maps+institut+teknologi+garut&PC=U316&FORM=CHROMN"
+                  frameborder="0"
+                  style="border: 0; width: 100%; height: 290px"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+              <form
+                action="forms/contact.php"
+                method="post"
+                role="form"
+                class="php-email-form">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      required />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    required />
+                </div>
+                <div class="form-group">
+                  <label for="name">Message</label>
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="10"
+                    required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Section -->
+    </main>
+    <!-- End #main -->
+  
+{% endblock %}
+
+
+
+
+
+   
